@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID-19: The Global Pandemic Story</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-annotation.v2.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>COVID-19: The Global Pandemic Story</h1>
+            <p class="subtitle">A narrative visualization of the pandemic's impact.</p>
+        </header>
+        
+        <nav id="navigation">
+            <button class="nav-btn active" data-scene="0">Scene 1: The Outbreak</button>
+            <button class="nav-btn" data-scene="1">Scene 2: The Surge</button>
+            <button class="nav-btn" data-scene="2">Scene 3: The Recovery</button>
+            <button class="nav-btn" data-scene="3">Scene 4: Country Comparison</button>
+        </nav>
+        
+        <main id="visualization">
+            <div id="scene-container"></div>
+        </main>
+        
+        <div id="controls">
+            <div id="scene-info">
+                <h3 id="scene-title">Scene 1: The Outbreak</h3>
+                <p id="scene-description">The early days of COVID-19 and its initial global spread.</p>
+            </div>
+            <div id="interaction-hints">
+                <p>💡 <span id="hint-text">Use navigation to explore the story.</span></p>
+            </div>
+        </div>
+        
+        <footer>
+            <small>
+                Data: <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">JHU CSSE COVID-19</a>  
+            </small>
+        </footer>
+    </div>
+    <script src="narrative.js"></script>
+</body>
+</html>

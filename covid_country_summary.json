@@ -1,0 +1,62 @@
+{
+  "US": {
+    "max_confirmed": 103802702,
+    "max_deaths": 1123836,
+    "total_confirmed": 103802702,
+    "total_deaths": 1123836
+  },
+  "India": {
+    "max_confirmed": 44690738,
+    "max_deaths": 530779,
+    "total_confirmed": 44690738,
+    "total_deaths": 530779
+  },
+  "Brazil": {
+    "max_confirmed": 37081209,
+    "max_deaths": 699276,
+    "total_confirmed": 37076053,
+    "total_deaths": 699276
+  },
+  "France": {
+    "max_confirmed": 39866718,
+    "max_deaths": 166176,
+    "total_confirmed": 39866718,
+    "total_deaths": 166176
+  },
+  "Germany": {
+    "max_confirmed": 38249060,
+    "max_deaths": 0,
+    "total_confirmed": 38249060,
+    "total_deaths": 0
+  },
+  "United Kingdom": {
+    "max_confirmed": 24658705,
+    "max_deaths": 220721,
+    "total_confirmed": 24658705,
+    "total_deaths": 220721
+  },
+  "Russia": {
+    "max_confirmed": 22075858,
+    "max_deaths": 388478,
+    "total_confirmed": 22075858,
+    "total_deaths": 388478
+  },
+  "Italy": {
+    "max_confirmed": 25603510,
+    "max_deaths": 188322,
+    "total_confirmed": 25603510,
+    "total_deaths": 188322
+  },
+  "Turkey": {
+    "max_confirmed": 17042722,
+    "max_deaths": 0,
+    "total_confirmed": 17042722,
+    "total_deaths": 0
+  },
+  "Korea, South": {
+    "max_confirmed": 30615522,
+    "max_deaths": 0,
+    "total_confirmed": 30615522,
+    "total_deaths": 0
+  }
+}
