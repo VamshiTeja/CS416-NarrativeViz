@@ -207,7 +207,7 @@ class CovidNarrative {
                 guidance = "Compare the dual lines. Green shows cases, purple shows deaths. See vaccination milestone.";
                 break;
             case 'countries':
-                guidance = "Compare country trends across the full timeline. Hover over lines for country details. Use legend to identify countries. Shows complete pandemic progression for each country.";
+                guidance = "Compare country trends across the full timeline. Use legend to identify countries. Shows complete pandemic progression for each country.";
                 break;
         }
         
