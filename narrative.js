@@ -527,7 +527,7 @@ class CovidNarrative {
         // Focus on the recovery period (2021 onwards)
         const recoveryData = this.data.filter(d => d.date >= new Date('2021-01-01'));
         
-        const margin = { top: 40, right: 80, bottom: 60, left: 60 };
+        const margin = { top: 40, right: 120, bottom: 60, left: 60 };
         const width = 800 - margin.left - margin.right;
         const height = 400 - margin.top - margin.bottom;
         
@@ -583,6 +583,11 @@ class CovidNarrative {
             .attr('stroke-dasharray', '5,5')
             .attr('d', deathLine);
 
+        // Add right-side y-axis for deaths
+        svg.append('g')
+            .attr('transform', `translate(${width + 40},0)`)
+            .call(d3.axisRight(deathScale).tickFormat(d3.format(".2s")));
+
         // Legend
         const legend = svg.append('g')
             .attr('transform', `translate(${width - 150}, 20)`);
@@ -599,7 +604,7 @@ class CovidNarrative {
             .attr('x', 25)
             .attr('y', 5)
             .style('font-size', '12px')
-            .text('Confirmed Cases');
+            .text('Cases');
             
         legend.append('line')
             .attr('x1', 0)
@@ -641,13 +646,25 @@ class CovidNarrative {
             .style('text-anchor', 'middle')
             .text('Date');
             
+        // Left y-axis label (Cases)
         svg.append('text')
             .attr('class', 'axis-label')
             .attr('transform', 'rotate(-90)')
             .attr('x', -height / 2)
             .attr('y', -45)
             .style('text-anchor', 'middle')
-            .text('Cases & Deaths');
+            .text('Cases');
+            
+        // Right y-axis label (Deaths)
+        svg.append('text')
+            .attr('class', 'axis-label')
+            .attr('x', width + 80)
+            .attr('y', height / 2)
+            .attr('transform', `rotate(90, ${width + 80}, ${height / 2})`)
+            .style('text-anchor', 'middle')
+            .style('font-size', '12px')
+            .style('fill', '#8e44ad')
+            .text('Deaths');
 
         // Tooltip
         const tooltip = d3.select(container).append('div').attr('class', 'tooltip').style('opacity', 0);
